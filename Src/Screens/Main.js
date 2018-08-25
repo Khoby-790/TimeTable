@@ -1,11 +1,30 @@
 import React from 'react';
-import {View, Text, StyleSheet } from 'react-native';
+import {View, Text, StyleSheet, ScrollView } from 'react-native';
+import Course from './course';
+let data = require('../../data.json');
 
+let days_of_week = ['Monday','Tuesday','Wednesday','Thursday','Friday'];
 
+let days = data.days;
+let day_number = 4;
+
+let course = data.days;
+// console.log();
+
+let dat = new Date();
+console.log(" the days is " + dat.getDay());
 export default class TimeTable extends React.Component{
   constructor(props){
     super(props);
   }
+
+viewCourse(){
+  let days = data.days;
+  for(let i in days){
+    console.log(i);
+  }
+}
+
 
   render(){
     return(
@@ -15,39 +34,20 @@ export default class TimeTable extends React.Component{
         </View>
         <View style={styles.content}>
 
-            <View style={styles.card}>
-              <View style={styles.row}>
-                  <Text style={styles.course_code}>CSCD 201</Text>
-              </View>
-              <View style={styles.row}>
-                <Text style={styles.course_code}>Computer Design And Architecture</Text>
-              </View>
-              <View style={styles.row, styles.rowBottom}>
-                  <View style={styles.col}>
-                      <Text style={styles.time}> 6 : 00 pm</Text>
-                  </View>
-                  <View style={styles.col}>
-                      <Text style={styles.time}>JQB room 19</Text>
-                  </View>
-              </View>
-            </View>
+          <ScrollView>
+          {course[days_of_week[day_number]].courses.map((i,v)=>{
+          return(
+            <Course
+              course_code={i.course_id}
+              course_title={i.course_title}
+              time={i.time}
+              venue={i.venue}
+            />
+          );
+        })
+      }
 
-            <View style={styles.card}>
-              <View style={styles.row}>
-                  <Text style={styles.course_code}>CSCD 201</Text>
-              </View>
-              <View style={styles.row}>
-                <Text style={styles.course_code}>Computer Design And Architecture</Text>
-              </View>
-              <View style={styles.row, styles.rowBottom}>
-                  <View style={styles.col}>
-                      <Text style={styles.time}> 6 : 00 pm</Text>
-                  </View>
-                  <View style={styles.col}>
-                      <Text style={styles.time}>NNB 1</Text>
-                  </View>
-              </View>
-            </View>
+            </ScrollView>
 
         </View>
       </View>
@@ -80,43 +80,8 @@ const styles  = StyleSheet.create({
   content:{
     flex:1,
     padding:5,
+    paddingTop:10,
     backgroundColor:'skyblue',
     alignItems:'center',
-  },
-  card:{
-    height:200,
-    width:'100%',
-    backgroundColor:'#b3fff0',
-    borderRadius:12,
-    margin:10,
-  },
-  row:{
-    flex:1,
-    // height:30,
-    // backgroundColor:'yellow'
-    justifyContent:'center',
-    alignItems:'center',
-  },
-  rowBottom:{
-    // display:'flex',
-    // flex:1,
-    flexDirection:'row',
-    justifyContent:'center',
-    alignItems:'center',
-
-  },
-  col:{
-    width:'50%',
-    // height:'100%',
-    backgroundColor:'red',
-  },
-  course_code:{
-    fontWeight: 'bold',
-    fontSize: 24,
-    color:'#ff6666',
-  },
-  time:{
-    fontSize:17,
-    color:'#66d9ff',
-  },
+  }
 });
