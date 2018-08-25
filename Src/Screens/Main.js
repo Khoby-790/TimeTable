@@ -1,59 +1,73 @@
 import React from 'react';
-import {View, Text, StyleSheet, ScrollView } from 'react-native';
+import {View, Text, StyleSheet, ScrollView, Button, Platform } from 'react-native';
+import PushNotification from 'react-native-push-notification';
 import Course from './course';
 let data = require('../../data.json');
+let days_of_week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+let dat = new Date();
 
-let days_of_week = ['Monday','Tuesday','Wednesday','Thursday','Friday'];
-
-let days = data.days;
-let day_number = 4;
+let day_number = dat.getDay();
 
 let course = data.days;
-// console.log();
 
-let dat = new Date();
-console.log(" the days is " + dat.getDay());
+
+
+
 export default class TimeTable extends React.Component{
   constructor(props){
     super(props);
+    
   }
 
-viewCourse(){
-  let days = data.days;
-  for(let i in days){
-    console.log(i);
+
+displayCourse(data,v){
+  if(data == null){
+    // return();
+  }else{
+    return(
+      <Course
+        key={v}
+        course_code={data.course_id}
+        course_title={data.course_title}
+        course_time={data.course_time}
+        course_venue={data.course_venue}
+      />
+    );
   }
 }
 
 
   render(){
-    return(
-      <View style={styles.container}>
-        <View style={styles.navbar}>
-            <Text style={styles.navTitle}>Timetable</Text>
-        </View>
-        <View style={styles.content}>
+    if(day_number == 0 || day_number == 6){
+        return(
+          <View style={styles.container}>
+            <View style={styles.navbar}>
+                <Text style={styles.navTitle}>Timetable {days_of_week[day_number]}</Text>
+            </View>
+            <View style={styles.content}>
+                <Text>Sorry No Schedule for the day</Text>
+            </View>
+          </View>
+        );
+    }else{
+        return(
+          <View style={styles.container}>
+            <View style={styles.navbar}>
+                <Text style={styles.navTitle}>Timetable {days_of_week[day_number]}</Text>
+            </View>
+            <View style={styles.content}>
 
-          <ScrollView>
-          {course[days_of_week[day_number]].courses.map((i,v)=>{
-          return(
-            <Course
-              course_code={i.course_id}
-              course_title={i.course_title}
-              time={i.time}
-              venue={i.venue}
-            />
-          );
-        })
-      }
+              <ScrollView>
+              {
+                course[days_of_week[day_number]].courses.map((i,v)=>this.displayCourse(i,v))
+              }
+              </ScrollView>
 
-            </ScrollView>
-
-        </View>
-      </View>
-    );
+            </View>
+          </View>
+        );
   }
-
+}
 
 }
 
@@ -83,5 +97,13 @@ const styles  = StyleSheet.create({
     paddingTop:10,
     backgroundColor:'skyblue',
     alignItems:'center',
-  }
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+    },
+    Button:{
+    margin: 10,
+    }
 });

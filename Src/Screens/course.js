@@ -18,10 +18,10 @@ export default class Course extends React.Component{
         </View>
         <View style={styles.row, styles.rowBottom}>
             <View style={styles.col}>
-                <Text style={styles.time}>{this.props.time}</Text>
+                <Text style={styles.time}>{this.props.course_time}</Text>
             </View>
             <View style={styles.col}>
-                <Text style={styles.time}>{this.props.venue}</Text>
+                <Text style={styles.time}>{this.props.course_venue}</Text>
             </View>
         </View>
       </View>

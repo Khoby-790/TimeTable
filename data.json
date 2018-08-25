@@ -1,0 +1,144 @@
+{
+    "days":{
+        "Monday":{
+            "courses":[
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                },
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                },
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                },
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                }
+            ]
+        },
+        "Tuesday":{
+            "courses":[
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                },
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                },
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                },
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                }
+            ]
+        },
+        "Wednesday":{
+            "courses":[
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                },
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                },
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                },
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                }
+            ]
+        },
+        "Thursday":{
+            "courses":[
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                },
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                },
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                },
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                }
+            ]
+        },
+        "Friday":{
+            "courses":[
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                },
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                },
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                },
+                {
+                    "course_id":"CSCD 201",
+                    "course_title":"Information Systems",
+                    "course_time":"7:30 am",
+                    "course_venue":"NNB 3"
+                }
+            ]
+        }
+    }
+}
