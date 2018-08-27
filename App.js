@@ -1,9 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import TimeTable from './Src/Screens/Main';
+import Views from './Src/Screens/Views';
+
 export default class App extends React.Component {
   render() {
-    return (<TimeTable/>);
+    return (
+       <Views/>
+    );
   }
 }
 

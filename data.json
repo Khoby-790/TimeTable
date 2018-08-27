@@ -3,27 +3,15 @@
         "Monday":{
             "courses":[
                 {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
+                    "course_id":"CSCD 205",
+                    "course_title":"Programming I(C++)",
                     "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
+                    "course_venue":"jQB room 19"
                 },
                 {
                     "course_id":"CSCD 201",
                     "course_title":"Information Systems",
-                    "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
-                },
-                {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
-                    "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
-                },
-                {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
-                    "course_time":"7:30 am",
+                    "course_time":"5:30 am",
                     "course_venue":"NNB 3"
                 }
             ]
@@ -31,27 +19,21 @@
         "Tuesday":{
             "courses":[
                 {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
+                    "course_id":"MATH 223",
+                    "course_title":"Calculus 2",
                     "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
+                    "course_venue":"Math room 5"
                 },
                 {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
-                    "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
+                    "course_id":"CSCD 207",
+                    "course_title":"Numerical Methods",
+                    "course_time":"11:30 am",
+                    "course_venue":"KAB"
                 },
                 {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
-                    "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
-                },
-                {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
-                    "course_time":"7:30 am",
+                    "course_id":"CSCD 211",
+                    "course_title":"Computer Organiztion and Architecture",
+                    "course_time":"5:30 pm",
                     "course_venue":"NNB 3"
                 }
             ]
@@ -61,82 +43,40 @@
                 {
                     "course_id":"CSCD 201",
                     "course_title":"Information Systems",
-                    "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
+                    "course_time":"1:30 pm",
+                    "course_venue":"JQB room 19"
                 },
                 {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
-                    "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
-                },
-                {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
-                    "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
-                },
-                {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
-                    "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
+                    "course_id":"CSCD 211",
+                    "course_title":"Computer Organiztion and Architecture",
+                    "course_time":"4:30 pm",
+                    "course_venue":"NB 2"
                 }
             ]
         },
         "Thursday":{
             "courses":[
                 {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
+                    "course_id":"CSCD 207",
+                    "course_title":"Numerical Methods",
                     "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
+                    "course_venue":"NNB 1"
                 },
                 {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
-                    "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
-                },
-                {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
-                    "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
-                },
-                {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
-                    "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
+                    "course_id":"CSCD 205",
+                    "course_title":"Programming I(C++)",
+                    "course_time":"8:30 am",
+                    "course_venue":"NNB 1"
                 }
             ]
         },
         "Friday":{
             "courses":[
                 {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
-                    "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
-                },
-                {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
-                    "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
-                },
-                {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
-                    "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
-                },
-                {
-                    "course_id":"CSCD 201",
-                    "course_title":"Information Systems",
-                    "course_time":"7:30 am",
-                    "course_venue":"NNB 3"
+                    "course_id":"MATH 223",
+                    "course_title":"Calculus 2",
+                    "course_time":"5:30 pm",
+                    "course_venue":"Math room 5"
                 }
             ]
         }

@@ -1,7 +1,5 @@
 import React from 'react';
-import { Permissions, Notifications } from 'expo';
-import {View, Text, StyleSheet, ScrollView, Button, Platform } from 'react-native';
-import PushNotification from 'react-native-push-notification';
+import {View, Text, ScrollView,} from 'react-native';
 import Course from './course';
 import { createBottomTabNavigator } from 'react-navigation';
 import Days from './Days';
@@ -13,7 +11,7 @@ let data = require('../../data.json');
 let days_of_week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 let dat = new Date();
 
-let day_number = dat.getDay();
+
 
 let course = data.days;
 
@@ -21,15 +19,12 @@ let course = data.days;
  
 
 
-export default class TimeTable extends React.Component{
+ export default class DayCourse extends React.Component{
   constructor(props){
     super(props);
     
   }
 
-
-
-  
 
   
 
@@ -50,25 +45,25 @@ displayCourse(data,v){
   }
 }
 
+static navigationOptions =({navigation})=> {
+  return{
+    title: navigation.getParam('day') ,
+    headerStyle:{
+      backgroundColor :'#003366',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle:{
+      color: 'white',
+    }
+  }
+};
+
 
   render(){
-    if(day_number == 0 || day_number == 6){
+  
+    let day_number = this.props.navigation.getParam('course_num');
         return(
           <View style={styles.container}>
-            <View style={styles.navbar}>
-                <Text style={styles.navTitle}>{days_of_week[day_number]}</Text>
-            </View>
-            <View style={styles.content}>
-                <Text style={{textAlign:'center'}}>Sorry No Schedule for the day</Text>
-            </View>
-          </View>
-        );
-    }else{
-        return(
-          <View style={styles.container}>
-            <View style={styles.navbar}>
-                <Text style={styles.navTitle}>{days_of_week[day_number]}</Text>
-            </View>
             <View style={styles.content}>
 
               <ScrollView>
@@ -80,14 +75,8 @@ displayCourse(data,v){
             </View>
           </View>
         );
-  }
 }
 
 }
-
-
-
-
-
 
 
