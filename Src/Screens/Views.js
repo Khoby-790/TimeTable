@@ -1,6 +1,5 @@
 import React from 'react';
 import { createBottomTabNavigator} from 'react-navigation';
-import {Ionicons} from '@expo/vector-icons';
 import {FontAwesome} from 'react-native-vector-icons';
 import TimeTable from './Main';
 import MoreOnDays from './index';
@@ -25,8 +24,8 @@ let Views = createBottomTabNavigator({
       }
     }),
     tabBarOptions: {
-      activeTintColor: '#003366',
-      inactiveTintColor: 'tomato',
+      activeTintColor: 'tomato',
+      inactiveTintColor: '#003366',
     },
   },
 );

@@ -20,7 +20,7 @@
             "courses":[
                 {
                     "course_id":"MATH 223",
-                    "course_title":"Calculus 2",
+                    "course_title":"Calculus II",
                     "course_time":"7:30 am",
                     "course_venue":"Math room 5"
                 },
@@ -32,7 +32,7 @@
                 },
                 {
                     "course_id":"CSCD 211",
-                    "course_title":"Computer Organiztion and Architecture",
+                    "course_title":"Computer Organization and Architecture",
                     "course_time":"5:30 pm",
                     "course_venue":"NNB 3"
                 }
@@ -48,7 +48,7 @@
                 },
                 {
                     "course_id":"CSCD 211",
-                    "course_title":"Computer Organiztion and Architecture",
+                    "course_title":"Computer Organization and Architecture",
                     "course_time":"4:30 pm",
                     "course_venue":"NB 2"
                 }
@@ -74,7 +74,7 @@
             "courses":[
                 {
                     "course_id":"MATH 223",
-                    "course_title":"Calculus 2",
+                    "course_title":"Calculus II",
                     "course_time":"5:30 pm",
                     "course_venue":"Math room 5"
                 }

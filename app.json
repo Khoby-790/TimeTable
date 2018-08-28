@@ -14,7 +14,7 @@
 	"package": "com.emmanuelbaidoo.timetable"
 	},
 	"splash": {
-  	"image": "./Src/Screens/images/splash.png",
+  	"image": "./Src/Screens/images/splashface3.png",
     "width":"100%",
     "height":"100%",
 		"resizeMode":"cover"

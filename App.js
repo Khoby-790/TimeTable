@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Views from './Src/Screens/Views';
+import Course from './Src/Screens/course';
 
 export default class App extends React.Component {
   render() {

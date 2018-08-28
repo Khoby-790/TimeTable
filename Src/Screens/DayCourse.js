@@ -1,10 +1,7 @@
 import React from 'react';
 import {View, Text, ScrollView,} from 'react-native';
 import Course from './course';
-import { createBottomTabNavigator } from 'react-navigation';
-import Days from './Days';
 import styles from './Css/Styles';
-import DayScreen from './index';
 
 
 let data = require('../../data.json');
@@ -49,7 +46,7 @@ static navigationOptions =({navigation})=> {
   return{
     title: navigation.getParam('day') ,
     headerStyle:{
-      backgroundColor :'#003366',
+      backgroundColor :'#363765',
     },
     headerTintColor: '#fff',
     headerTitleStyle:{

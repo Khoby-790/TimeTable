@@ -12,7 +12,7 @@ export default class Days extends React.Component{
     static navigationOptions = {
         title: 'Days',
         headerStyle:{
-          backgroundColor :'#003366',
+          backgroundColor :'#363765',
         },
         headerTitleStyle:{
           color: 'white',
@@ -41,11 +41,13 @@ export default class Days extends React.Component{
                         style={styles.dayCard}
                         onPress={()=>this.openDaysCourse(1,"Monday")}
                     >
-                        <View style={styles.dayCard}>
-                        <FontAwesome name="hourglass-o" color="#003366" size={30}/>
-                            <Text>
-                                Monday
-                            </Text>
+                        <View style={styles.cardInner}>
+                            <View style={styles.dayColLeft}>
+                                <FontAwesome name="hourglass-o" color="#003366" size={30}/>
+                            </View>
+                            <View style={styles.dayColRight}>
+                                <Text style={styles.dayText}>Monday</Text>
+                            </View>
                         </View>
                     </TouchableOpacity>
 
@@ -54,11 +56,13 @@ export default class Days extends React.Component{
                         style={styles.dayCard}
                         onPress={()=>this.openDaysCourse(2,"Tuesday")}
                     >
-                        <View style={styles.dayCard}>
-                        <FontAwesome name="hourglass-o" color="#003366" size={30}/>
-                            <Text>
-                                Tuesday
-                            </Text>
+                        <View style={styles.cardInner}>
+                            <View style={styles.dayColLeft}>
+                                <FontAwesome name="hourglass-o" color="#003366" size={30}/>
+                            </View>
+                            <View style={styles.dayColRight}>
+                                <Text style={styles.dayText}>Tuesday</Text>
+                            </View>
                         </View>
                     </TouchableOpacity>
 
@@ -67,11 +71,13 @@ export default class Days extends React.Component{
                         style={styles.dayCard}
                         onPress={()=>this.openDaysCourse(3,"Wednesday")}
                     >
-                        <View style={styles.dayCard}>
-                        <FontAwesome name="hourglass-o" color="#003366" size={30}/>
-                            <Text>
-                                Wednessday
-                            </Text>
+                        <View style={styles.cardInner}>
+                            <View style={styles.dayColLeft}>
+                                <FontAwesome name="hourglass-o" color="#003366" size={30}/>
+                            </View>
+                            <View style={styles.dayColRight}>
+                                <Text style={styles.dayText}>Wednessday</Text>
+                            </View>
                         </View>
                     </TouchableOpacity>
 
@@ -80,11 +86,13 @@ export default class Days extends React.Component{
                         style={styles.dayCard}
                         onPress={()=>this.openDaysCourse(4,"Thursday")}
                     >
-                        <View style={styles.dayCard}>
-                        <FontAwesome name="hourglass-o" color="#003366" size={30}/>
-                            <Text>
-                                Thursday
-                            </Text>
+                        <View style={styles.cardInner}>
+                            <View style={styles.dayColLeft}>
+                                <FontAwesome name="hourglass-o" color="#003366" size={30}/>
+                            </View>
+                            <View style={styles.dayColRight}>
+                                <Text style={styles.dayText}>Thursday</Text>
+                            </View>
                         </View>
                     </TouchableOpacity>
 
@@ -93,11 +101,13 @@ export default class Days extends React.Component{
                         style={styles.dayCard}
                         onPress={()=>this.openDaysCourse(5,"Friday")}
                     >
-                        <View style={styles.dayCard}>
-                        <FontAwesome name="hourglass-o" color="#003366" size={30}/>
-                            <Text>
-                                Friday
-                            </Text>
+                        <View style={styles.cardInner}>
+                            <View style={styles.dayColLeft}>
+                                <FontAwesome name="hourglass-o" color="#003366" size={30}/>
+                            </View>
+                            <View style={styles.dayColRight}>
+                                <Text style={styles.dayText}>Friday</Text>
+                            </View>
                         </View>
                     </TouchableOpacity>
                     </ScrollView>

@@ -1,20 +1,27 @@
 import React from 'react';
-import { Permissions, Notifications } from 'expo';
-import {View, Text, StyleSheet, ScrollView, Button, Platform } from 'react-native';
-import PushNotification from 'react-native-push-notification';
+import {View, Text, ScrollView} from 'react-native';
 import Course from './course';
-import { createBottomTabNavigator } from 'react-navigation';
-import Days from './Days';
 import styles from './Css/Styles';
-import DayScreen from './index';
 
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
 let data = require('../../data.json');
 let days_of_week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 let dat = new Date();
 
 let day_number = dat.getDay();
-
+var day = dat.getDate();
+let Actual_day;
+if(day == 1){
+  Actual_day = `${day}st`;
+}else if(day == 2){
+  Actual_day = `${day}nd`;
+}else if(day == 3){
+  Actual_day = `${day}rd`;
+}else{
+  Actual_day = `${day}th`;
+}
+let REAL_DATE = `${Actual_day} ${MONTHS[dat.getMonth()]} ${dat.getFullYear()}`;
 let course = data.days;
 
 
@@ -67,7 +74,12 @@ displayCourse(data,v){
         return(
           <View style={styles.container}>
             <View style={styles.navbar}>
-                <Text style={styles.navTitle}>{days_of_week[day_number]}</Text>
+                <View style={styles.navbarLeft}>
+                  <Text style={styles.navTitle}>{days_of_week[day_number]}</Text>
+                </View>
+                <View style={styles.navbarRight}>
+                    <Text style={styles.date}>{REAL_DATE}</Text>
+                </View>
             </View>
             <View style={styles.content}>
 
