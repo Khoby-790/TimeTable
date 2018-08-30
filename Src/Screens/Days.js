@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, TouchableOpacity, ScrollView} from "react-native";
 import styles from './Css/Styles';
 import {FontAwesome} from 'react-native-vector-icons';
+let day = new Date().getDay();
 export default class Days extends React.Component{
     constructor(props){
         super(props);

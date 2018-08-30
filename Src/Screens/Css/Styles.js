@@ -18,7 +18,7 @@ let styles = StyleSheet.create({
     marginTop:24,
     height:70,
     width:'100%',
-    backgroundColor:'#003366',
+    backgroundColor:'#363765',
     // 
     // color:'white',
   },
@@ -141,7 +141,7 @@ card:{
   course_title:{
     fontWeight: 'bold',
     fontSize: 30,
-    color:'##363765',
+    color:'#363765',
     // marginTop:15,
   },
   time:{

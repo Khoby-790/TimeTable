@@ -4,25 +4,26 @@ import Course from './course';
 import styles from './Css/Styles';
 
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-
 let data = require('../../data.json');
 let days_of_week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 let dat = new Date();
-
 let day_number = dat.getDay();
 var day = dat.getDate();
 let Actual_day;
-if(day == 1){
-  Actual_day = `${day}st`;
-}else if(day == 2){
-  Actual_day = `${day}nd`;
-}else if(day == 3){
-  Actual_day = `${day}rd`;
-}else{
-  Actual_day = `${day}th`;
-}
-let REAL_DATE = `${Actual_day} ${MONTHS[dat.getMonth()]} ${dat.getFullYear()}`;
-let course = data.days;
+
+//check and present the day in the right form .....
+
+  if(day == 1 || day == 21 || day == 31){
+    Actual_day = `${day}st`;
+  }else if(day == 2 || day == 22){
+    Actual_day = `${day}nd`;
+  }else if(day == 3 || day == 23){
+    Actual_day = `${day}rd`;
+  }else{
+    Actual_day = `${day}th`;
+  }
+  let REAL_DATE = `${Actual_day} ${MONTHS[dat.getMonth()]} ${dat.getFullYear()}`;
+  let course = data.days;
 
 
  
@@ -34,28 +35,21 @@ export default class TimeTable extends React.Component{
     
   }
 
-
-
-  
-
-  
-
-
-displayCourse(data,v){
-  if(data == null){
-    // return();
-  }else{
-    return(
-      <Course
-        key={v}
-        course_code={data.course_id}
-        course_title={data.course_title}
-        course_time={data.course_time}
-        course_venue={data.course_venue}
-      />
-    );
-  }
-}
+    displayCourse(data,v){
+      if(data == null){
+        // return();
+      }else{
+        return(
+          <Course
+            key={v}
+            course_code={data.course_id}
+            course_title={data.course_title}
+            course_time={data.course_time}
+            course_venue={data.course_venue}
+          />
+        );
+      }
+    }
 
 
   render(){
