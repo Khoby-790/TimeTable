@@ -25,7 +25,7 @@ export default class App extends React.Component {
 
 
   render() {
-    scheduleNotification();
+    // scheduleNotification();
     if(this.state.loading){
       return(
           <View>
