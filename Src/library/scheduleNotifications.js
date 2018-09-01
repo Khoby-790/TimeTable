@@ -21,6 +21,12 @@ const createLocalNotification = (title, body) => {
 
 
 const createSchedule = (time) => {
-    let scheduledTime = new Date()).getTime() + 1000;
-
+    let date = new Date('2018-08-30' + time + 'z');
+    let scheduledTime = date.getMilliseconds() - (6000*60);
+    return scheduledTime;
 };
+
+
+module.export = {
+  Notifications.scheduleLocalNotificationAsync(createLocalNotification("hey notify","it worked again"),createSchedule('21:20:00'));
+}
