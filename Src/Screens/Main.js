@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, ScrollView} from 'react-native';
+import {View, Text, ScrollView, AsyncStorage} from 'react-native';
 import Course from './course';
 import styles from './Css/Styles';
 
@@ -33,6 +33,11 @@ export default class TimeTable extends React.Component{
   constructor(props){
     super(props);
     
+  }
+
+  collectUsertimeTable = async () =>{
+    let userData = await AsyncStorage.getItem('userDetails');
+    return userData;
   }
 
     displayCourse(data,v){
