@@ -4,13 +4,15 @@ import Course from './course';
 import styles from './Css/Styles';
 
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-let data = require('../../data.json');
+//let data = require('../../data.json');
 let days_of_week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 let dat = new Date();
-let day_number = dat.getDay();
+let day_number = 1;
 var day = dat.getDate();
 let Actual_day;
-
+let inforamtion;
+let userData;
+let data;
 //check and present the day in the right form .....
 
   if(day == 1 || day == 21 || day == 31){
@@ -23,7 +25,7 @@ let Actual_day;
     Actual_day = `${day}th`;
   }
   let REAL_DATE = `${Actual_day} ${MONTHS[dat.getMonth()]} ${dat.getFullYear()}`;
-  let course = data.days;
+  //let course = data.days;
 
 
 
@@ -32,13 +34,24 @@ let Actual_day;
 export default class TimeTable extends React.Component{
   constructor(props){
     super(props);
+    this.state = {
+      collectedData:'hello',
+    }
+  }
 
+  componentDidMount(){
+    this.collectUsertimeTable();
+    //let pa = JSON.parse(data);
+    alert(typeof(inforamtion.Monday));
   }
 
   collectUsertimeTable = async () =>{
-    let userData = await AsyncStorage.getItem('userDetails');
-    return userData;
+    let userDetails = await AsyncStorage.getItem('userDetails');
+    let parsedData = JSON.parse(userDetails);
+    inforamtion = parsedData;
+    alert(parsedData.days.Monday.courses[0].course_title);
   }
+
 
     displayCourse(data,v){
       if(data == null){
@@ -84,7 +97,7 @@ export default class TimeTable extends React.Component{
 
               <ScrollView>
               {
-                course[days_of_week[day_number]].courses.map((i,v)=>this.displayCourse(i,v))
+                // inforamtion.days.Monday.courses.map((i,v)=>this.displayCourse(i,v))
               }
               </ScrollView>
 

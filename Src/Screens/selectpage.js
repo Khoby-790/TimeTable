@@ -1,66 +1,66 @@
 import React from 'react';
 import {View, Text, AsyncStorage, TouchableOpacity,Picker, StyleSheet, ImageBackground} from 'react-native';
 let userObj = {};
-//import data from '../../organizedData';
+import Views from './Views';
+let info = require('../../organizedData');
+let data = info.Combination;
 
-const levels = [100,200,300,400];
-const courses = ['Computer Science','Information Technology'];
 
 
 
 
 export default class SelectPage extends React.Component{
+
     constructor(props){
         super(props);
         this.state = {
             level:"Select Level",
             program:"Select Program",
-            modalVisible:false,
-            modalVisible2:false,
-        }
+            loader:false,
+         }
     }
 
-    closeModal(){
-        this.setState({modalVisible:false})
-     }
-     openModal(){
-       this.setState({modalVisible:true})
-     }
 
      updateProgram(data){
         this.setState({
-          modalVisible:false,
           program:data,
         })
      }
 
      updateLevel(data){
          this.setState({
-           modalVisible2:false,
            level:data,
          })
      }
 
 
-     submit = async () =>{
-         let userRealTimeTableData = data.Combination[userObj.program][userObj.level];
-         await AsyncStorage.setItem('userDetails',JSON.stringify(userRealTimeTableData));
-         this.props.navigate('Page');
+     submit = () =>{
+       let prog = this.state.program;
+       let level = this.state.level;
+
+
+        //query timetable data and stringfy it before passing to the next page.
+         let userRealTimeTableData = data[prog].level[level];
+         let jsondata = JSON.stringify(userRealTimeTableData);
+         AsyncStorage.setItem('userDetails', jsondata);
+         this.props.navigation.navigate('pagecheck'); // navigate to the nexrt page from navigator
      }
 
 //function that checks to see if the input collected is not empty before further processes can take place
-     validateInputs(){
+     validateInputs() {
          if(this.state.level === "Select Level"){
              alert("Please select your level");
-         }else if(this.state.program == "Select Program"){
+         }else if(this.state.program === "Select Program"){
              alert("Please select your program");
          }else{
              this.submit();
          }
-     }
+     };
 
 
     render(){
+
+
         return(
             <ImageBackground
                 source={require('./images/splash.png')}
@@ -97,7 +97,7 @@ export default class SelectPage extends React.Component{
 
                         <TouchableOpacity
                         style={styles.button}
-                        onPress={this.validateInputs()}
+                        onPress={()=>this.validateInputs()}
                         >
                             <Text style={styles.buttonText}>Submit</Text>
                         </TouchableOpacity>

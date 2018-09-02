@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet,AsyncStorage, ActivityIndicator, View, StatusBar } from 'react-native';
 import Store from './Src/library/Store';
 import Views from './Src/Screens/Views';
+import MainPage from './Src/Screens/MainPage';
 import Course from './Src/Screens/course';
 // import scheduleNotification from './Src/library/scheduleNotifications';
 import SelectPage from './Src/Screens/selectpage';
@@ -12,7 +13,8 @@ import {createSwitchNavigator} from 'react-navigation';
 
 const SwitchNav = createSwitchNavigator({
   Select:SelectPage,
-  Page:Views,
+  pagecheck:MainPage,
+  try:Course,
 });
 
 
@@ -32,7 +34,12 @@ export default class App extends React.Component {
 
   //on app start check if a new user ? "navigate to selcet page " : "navigate to timetable"
   _boostrapAsync = async () =>{
-    const userToken = await AsyncStorage.getItem('userDetails');
+    let userToken =  null;
+    AsyncStorage.getItem('userDetails')
+                .then((value)=>{
+                  userToken  = value;
+                  // console.log(value)
+              }).done();
     //upon collect data navigation is done on that
 
     return (userToken? <Views/>: <SelectPage/>);
