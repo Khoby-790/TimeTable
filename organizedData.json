@@ -1,64 +1,261 @@
 {
-    "Combination":{
-        "Computer Science":{
-            "level":{
-                "100":{
-                    "days":{
-                        "Monday":{
-                            "courses":[
-                                {
-                                    "course_id":"MATH 223",
-                                    "course_title":"Calculus II",
-                                    "course_time":"7:30",
-                                    "course_venue":"Math room 5"
-                                },
-                                {
-                                    "course_id":"CSCD 207",
-                                    "course_title":"Numerical Methods",
-                                    "course_time":"11:30:00",
-                                    "course_venue":"KAB"
-                                },
-                                {
-                                    "course_id":"CSCD 211",
-                                    "course_title":"Computer Organization and Architecture",
-                                    "course_time":"17:30:00",
-                                    "course_venue":"NNB 3"
-                                }
-                            ]
-                        }
-                    }
-                }
+"Combination":{
+  "Computer Science":{
+      "level":{
+        "100":{
+          "days":{
+            "Tuesday":{
+              "courses":
+              [
+                {"course_id":"CSCD 103","course_title":"Introduction To Computer Science","venue":"NNB 2","time":"11:30"}
+              ]
+              },
+            "Friday":{
+              "courses":
+              [
+                {"course_id":"CSCD 103","course_title":"Introduction To Computer Science","venue":"NB 3","time":"09:30"}
+              ]
+              }
             }
         },
-        "Information Technology":{
-            "Level":{
-                "100":{
-                    "days":{
-                        "Monday":{
-                            "courses":[
-                                {
-                                    "course_id":"MATH 223",
-                                    "course_title":"Calculus II",
-                                    "course_time":"7:30",
-                                    "course_venue":"Math room 5"
-                                },
-                                {
-                                    "course_id":"CSCD 207",
-                                    "course_title":"Numerical Methods",
-                                    "course_time":"11:30:00",
-                                    "course_venue":"KAB"
-                                },
-                                {
-                                    "course_id":"CSCD 211",
-                                    "course_title":"Computer Organization and Architecture",
-                                    "course_time":"17:30:00",
-                                    "course_venue":"NNB 3"
-                                }
-                            ]
-                        } 
-                    }
-                }
+        "200":{
+          "days":{
+            "Monday":{
+              "courses":
+              [
+                {"course_id":"CSCD 205","course_title":"Programming I(c++)","venue":"JQB 19","time":"07:30"},
+                {"course_id":"CSCD 201","course_title":"Information Systems","venue":"NNB 3","time":"17:30"}
+              ]
+              },
+            "Tuesday":{
+              "courses":
+              [
+                {"course_id":"CSCD 207","course_title":"Numerical Methods","venue":"KAB","time":"11:30"},
+                {"course_id":"CSCD 211","course_title":"Computer Organization and Architecture","venue":"NNB 3","time":"17:30"}
+              ]
+              },
+            "Wednesday":{
+              "courses":
+              [
+                {"course_id":"CSCD 201","course_title":"Information Systems","venue":"JQB 19","time":"13:30"},
+                {"course_id":"CSCD 211","course_title":"Computer Organization and Architecture","venue":"NB 2","time":"16:30"}
+              ]
+              },
+            "Thursday":{
+              "courses":
+              [
+                {"course_id":"CSCD 207","course_title":"Numerical Methods","venue":"NNB 1","time":"07:30"},
+                {"course_id":"CSCD 205","course_title":"Programming I(c++)","venue":"NNB 1","time":"08:30"}
+              ]
+              }
+          }
+        },
+        "300":{
+          "days":{
+            "Monday":{
+              "courses":
+              [
+                {"course_id":"CSCD 301","course_title":"Object Oriented Analysis and Design","venue":"JQB 11","time":"11:30"}
+              ]
+              },
+            "Wednesday":{
+              "courses":
+              [
+                {"course_id":"CSCD 301","course_title":"Object Oriented Analysis and Design","venue":"KAB","time":"09:30"},
+                {"course_id":"CSCD 300","course_title":"","venue":"KAB","time":"10:30"},
+                {"course_id":"CSCD 311","course_title":"Web Technologies and Development","venue":"JQB 22","time":"15:30"},
+                {"course_id":"CSCD 317","course_title":"Embedded Systems","venue":"JQB 19","time":"17:30"}
+              ]
+              },
+            "Thursday":{
+              "courses":
+              [
+                {"course_id":"CSCD 313","course_title":"Database Management Systems","venue":"NB 3","time":"13:30"},
+                {"course_id":"CSCD 317","course_title":"Embedded Systems","venue":"NB 2","time":"17:30"},
+                {"course_id":"CSCD 319","course_title":"Computer Vision","venue":"MATH 19","time":"17:30"}
+              ]
+              },
+            "Friday":{
+              "courses":
+              [
+                {"course_id":"CSCD 311","course_title":"Web Technologies and Development","venue":"NB 2","time":"09:30"},
+                {"course_id":"CSCD 319","course_title":"Computer Vision","venue":"NNB 3","time":"16:30"},
+                {"course_id":"CSCD 315","course_title":"Operating Systems","venue":"NNB 3","time":"18:30"}
+              ]
+              }
+            }
+        },
+        "400":{
+          "days":{
+            "Monday":{
+              "courses":
+              [
+                {"course_id":"CSCD 400","course_title":"Project","venue":"SW LAB","time":"16:30"},
+                {"course_id":"CSCD 415","course_title":"Compilers","venue":"JQB 11","time":"17:30"}
+              ]
+              },
+            "Tuesday":{
+              "courses":
+              [
+                {"course_id":"CSCD 417","course_title":"Theory and Survey of Programming Languages","venue":"JQB 14","time":"09:30"},
+                {"course_id":"CSCD 427","course_title":"Data Communication and Networking","venue":"JQB 22","time":"10:30"},
+                {"course_id":"CSCD 409","course_title":"Data Mining and Warehousing","venue":"SW LAB","time":"10:30"},
+                {"course_id":"CSCD 423","course_title":"Software Modelling and Simulation","venue":"MATH 19","time":"11:30"},
+                {"course_id":"CSCD 419","course_title":"Formal Methods and Models","venue":"MATH 19","time":"12:30"},
+                {"course_id":"CSCD 400","course_title":"Project","venue":"SW LAB","time":"16:30"},
+                {"course_id":"CSCD 415","course_title":"Compilers","venue":"JQB 24","time":"17:30"},
+                {"course_id":"CSCD 421","course_title":"","venue":"JQB 24","time":"18:30"}
+              ]
+              },
+            "Wednesday":{
+              "courses":
+              [
+                {"course_id":"CSCD 409","course_title":"Data Mining and Warehousing","venue":"SW LAB","time":"07:30"},
+                {"course_id":"CSCD 400","course_title":"Project","venue":"MATH 19","time":"07:30"},
+                {"course_id":"CSCD 409","course_title":"Data Mining and Warehousing","venue":"SW LAB","time":"10:30"},
+                {"course_id":"CSCD 427","course_title":"Data Communication and Networking","venue":"KAB","time":"11:30"},
+                {"course_id":"CSCD 419","course_title":"Formal Methods and Models","venue":"JQB 09","time":"15:30"},
+                {"course_id":"CSCD 421","course_title":"","venue":"NB 2","time":"17:30"}
+              ]
+              },
+            "Thursday":{
+              "courses":
+              [
+                {"course_id":"CSCD 423","course_title":"Software Modelling and Simulation","venue":"JQB 19","time":"11:30"},                }
+                {"course_id":"CSCD 417","course_title":"Theory and Survey of Programming Languages","venue":"JQB 14","time":"13:30"},
+                {"course_id":"CSCD 400","course_title":"Project","venue":"JQB 23","time":"16:30"}
+              ]
+              }
             }
         }
+      }
+    },
+  "Information Technology":{
+      "level":{
+        "100":{
+          "days":{
+            "Monday":{
+              "courses":
+                [
+                  {"course_id":"CSIT 205","course_title":"Object Oriented Techniques for IT Problem Solving","venue":"NNB 2","time":"07:30"}
+                ]
+                }
+              }
+        },
+        "200":{
+          "days":{
+            "Monday":{
+              "courses":
+              [
+                {"course_id":"CSIT 205","course_title":"Object Oriented Techniques for IT Problem Solving","venue":"NNB 2","time":"07:30"},
+                {"course_id":"CSIT 207","course_title":"Database Fundamentals","venue":"NNB 2","time":"09:30"},
+                {"course_id":"CSIT 203","course_title":"Computer Hardware Fundamentals","venue":"NB 3","time":"17:30"}
+              ]
+              },
+            "Tuesday":{
+              "courses":
+              [
+                {"course_id":"CSIT 205","course_title":"Object Oriented Techniques for IT Problem Solving","venue":"JQB 14","time":"07:30"},
+                {"course_id":"CSIT  205","course_title":"Object Oriented Techniques for IT Problem Solving","venue":"JQB 14","time":"10:30"},
+                {"course_id":"CSIT 205","course_title":"Object Oriented Techniques for IT Problem Solving","venue":"KAB","time":"11:30"}
+              ]
+              },
+            "Thursday":{
+              "courses":
+              [
+                {"course_id":"CSIT 207","course_title":"Database Fundamentals","venue":"SW LAB","time":"09:30"},
+                {"course_id":"CSIT 203","course_title":"Computer Hardware Fundamentals","venue":"JQB 23","time":"15:30"}
+              ]
+              },
+            "Friday":{
+              "courses":
+              [
+                {"course_id":"CSIT 201","course_title":"Professional, Legal, Moral and Ethical issues in IT","venue":"JQB 09","time":"09:30"}
+              ]
+              }
+            }
+        },
+        "300":{
+          "days":{
+            "Monday":{
+              "courses":
+              [
+                {"course_id":"CSIT 303","course_title":"Human Computer Interaction","venue":"MATH 19","time":"17:30"}
+              ]
+              },
+            "Wednesday":{
+              "courses":
+              [
+                {"course_id":"CSIT 311","course_title":"Information Security Principles","venue":"MATH 19","time":"08:30"},
+                {"course_id":"CSIT 309","course_title":"Data Network Security","venue":"E 09","time":"09:30"},
+                {"course_id":"CSIT 307","course_title":"Digital and Logic Systems Design","venue":"LOT 1","time":"17:30"}
+              ]
+              },
+            "Thursday":{
+              "courses":
+              [
+                {"course_id":"CSIT 309","course_title":"Data Network Security","venue":"NNB 2","time":"07:30"},
+                {"course_id":"CSIT 311","course_title":"Information Security Principles","venue":"JQB 24","time":"09:30"},
+                {"course_id":"CSIT 301","course_title":"Mobile Development","venue":"NNB 3","time":"15:30"},
+                {"course_id":"CSIT 321","course_title":"Principles of Accounting","venue":"NB 2","time":"17:30"}
+              ]
+              },
+            "Friday":{
+              "courses":
+              [
+                {"course_id":"CSIT 301","course_title":"Mobile Development","venue":"JQB 14","time":"09:30"},
+                {"course_id":"CSIT 307","course_title":"Digital and Logic Systems Design","venue":"JQB 14","time":"10:30"},
+                {"course_id":"CSIT 303","course_title":"Human Computer Interaction","venue":"JQB 23","time":"15:30"},
+                {"course_id":"CSIT 321","course_title":"Principles of Accounting","venue":"NNB 3","time":"17:30"},
+                {"course_id":"CSIT 305","course_title":"Operating Systems Fundamentals","venue":"NNB 3","time":"18:30"}
+              ]
+              }
+            }
+        },
+        "400":{
+          "days":{
+            "Monday":{
+              "courses":
+              [
+                {"course_id":"CSIT 411","course_title":"Advanced Networking Principles","venue":"CHINESE LAB","time":"16:30"},
+                {"course_id":"CSIT 425","course_title":"Computer Crime, Forensics, and Auditting","venue":"NNB 3","time":"18:30"}
+              ]
+              },
+              "Tuesday":{
+                "courses":
+              [
+                {"course_id":"CSIT 411","course_title":"Advanced Networking Principles","venue":"JQB 14","time":"08:30"},
+                {"course_id":"CSIT 415","course_title":"Application of Digital Technologies","venue":"IBM LAB","time":"10:30"},
+                {"course_id":"CSIT 413","course_title":"Wireless Systems and Networks","venue":"CHINESE LAB","time":"15:30"},
+                {"course_id":"CSIT 409","course_title":"Cloud Computing","venue":"IBM LAB","time":"16:30"},
+                {"course_id":"CSIT 419","course_title":"Advanced Database","venue":"IBM LAB","time":"17:30"}
+              ]
+              },
+            "Wednesday":{
+              "courses":
+              [
+                {"course_id":"CSIT 431","course_title":"Data Network Security II","venue":"CHINESE LAB","time":"08:30"},
+                {"course_id":"CSIT 425","course_title":"Computer Crime, Forensics, and Auditting","venue":"JQB 09","time":"09:30"},
+                {"course_id":"CSIT 413","course_title":"Wireless Systems and Networks","venue":"JQB 22","time":"16:30"},
+                {"course_id":"CSIT 405","course_title":"Web II: Advanced Web Development","venue":"JQB 12","time":"17:30"}
+              ]
+              },
+            "Thursday":{
+              "courses":
+              [
+                {"course_id":"CSIT 413","course_title":"Wireless Systems and Networks","venue":"JQB 19","time":"07:30"},
+                {"course_id":"CSIT 409","course_title":"Cloud Computing","venue":"E 10","time":"17:30"}
+              ]
+              },
+            "Friday":{
+              "courses":
+              [
+                {"course_id":"CSIT 415","course_title":"Application of Digital Technologies","venue":"MATH 19","time":"13:30"}
+              ]
+              }
+            }
+        }
+      }
     }
+  }
 }
