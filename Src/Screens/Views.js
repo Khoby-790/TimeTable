@@ -11,7 +11,7 @@ let Views = createBottomTabNavigator({
   },
   {
     navigationOptions:({ navigation }) => ({
-      tabBarIcon:({focused, tintColor}) =>{
+      TabBarIcon:({focused, tintColor}) =>{
         const {routeName} = navigation.state;
         let name;
         if(routeName == "Today"){
@@ -29,6 +29,6 @@ let Views = createBottomTabNavigator({
     },
   },
 );
-  
-  
+
+
   module.exports = Views;

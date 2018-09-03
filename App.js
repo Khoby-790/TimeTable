@@ -1,55 +1,47 @@
 import React from 'react';
-import { StyleSheet,AsyncStorage, ActivityIndicator, View, StatusBar } from 'react-native';
+import { StyleSheet,AsyncStorage, ActivityIndicator, View, StatusBar ,Text} from 'react-native';
 import Store from './Src/library/Store';
 import Views from './Src/Screens/Views';
+import MainPage from './Src/Screens/MainPage';
 import Course from './Src/Screens/course';
-import scheduleNotification from './Src/library/scheduleNotifications';
+// import scheduleNotification from './Src/library/scheduleNotifications';
 import SelectPage from './Src/Screens/selectpage';
 import {createSwitchNavigator} from 'react-navigation';
 
-
+let userExists;
 //create switch navigation to check if user has already selected a levela and his/her program
 
-const SwitchNav = createSwitchNavigator({
-  Select:SelectPage,
-  Page:Views,
-});
 
 
 
-export default class App extends React.Component {
+
+ class App extends React.Component {
   constructor(props){
     super(props);
-    this._boostrapAsync();
-    //this.state = { loading: true, schedule: null };
+     this._bootstrapAsync();
+    this.state = { loading: true, data:null};
   }
 
-  // async storeSchedule(){
-  //     const schedule = await Store.storeSchedule();
-  //     this.setState({ schedule, loading: false });
-  // }
 
-
-  //on app start check if a new user ? "navigate to selcet page " : "navigate to timetable"
-  _boostrapAsync = async () =>{
+  _bootstrapAsync = async () => {
     const userToken = await AsyncStorage.getItem('userDetails');
-    //upon collect data navigation is done on that 
 
-    this.props.navigation.navigate(userToken? 'Page': 'Select');
-  }
-  
- 
+    // This will switch to the App screen or Auth screen and this loading
+    // screen will be unmounted and thrown away.
+    this.props.navigation.navigate(userToken ? 'pagecheck' : 'Select');
+  };
+
 
   render() {
-
     return (
       <View style={styles.container}>
-          <ActivityIndicator />
-          <StatusBar barStyle="default" />
-    </View>
+        <ActivityIndicator />
+        <StatusBar barStyle="default" />
+      </View>
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -58,4 +50,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+});
+
+
+
+export default createSwitchNavigator({
+  app:App,
+  Select:SelectPage,
+  pagecheck:Views,
 });

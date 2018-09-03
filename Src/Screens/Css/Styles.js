@@ -19,7 +19,7 @@ let styles = StyleSheet.create({
     height:70,
     width:'100%',
     backgroundColor:'#363765',
-    // 
+    //
     // color:'white',
   },
   navbarLeft:{
