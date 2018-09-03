@@ -1,8 +1,8 @@
 import React from 'react';
-import {View, Text, ScrollView, AsyncStorage} from 'react-native';
+import {View, Text, ScrollView, AsyncStorage,TouchableOpacity} from 'react-native';
 import Course from './course';
 import styles from './Css/Styles';
-
+import SelectPage from './selectpage';
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 //let data = require('../../data.json');
 let days_of_week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
@@ -13,6 +13,8 @@ let Actual_day;
 let inforamtion;
 let userData;
 let data;
+let courses ={};
+let convertData = new Array();
 //check and present the day in the right form .....
 
   if(day == 1 || day == 21 || day == 31){
@@ -36,22 +38,38 @@ export default class TimeTable extends React.Component{
     super(props);
     this.state = {
       collectedData:'hello',
+      loader:true,
     }
   }
 
   componentDidMount(){
-    this.collectUsertimeTable();
-    //let pa = JSON.parse(data);
-    alert(typeof(inforamtion.Monday));
+    inforamtion = this.collectUsertimeTable();
+    inforamtion.then((value)=>{
+      this.setState({
+        collectedData:value,
+        loader:false
+      })
+    })
   }
 
   collectUsertimeTable = async () =>{
     let userDetails = await AsyncStorage.getItem('userDetails');
-    let parsedData = JSON.parse(userDetails);
-    inforamtion = parsedData;
-    alert(parsedData.days.Monday.courses[0].course_title);
+
+    return userDetails;
   }
 
+
+  handleRemove(){
+    AsyncStorage.clear();
+    return(
+      <SelectPage/>
+    );
+  }
+
+
+ con = () => {
+  console.log(courses);
+}
 
     displayCourse(data,v){
       if(data == null){
@@ -71,40 +89,52 @@ export default class TimeTable extends React.Component{
 
 
   render(){
-    if(day_number == 0 || day_number == 6){
+    if(this.state.loader){
         return(
           <View style={styles.container}>
-            <View style={styles.navbar}>
-                <Text style={styles.navTitle}>{days_of_week[day_number]}</Text>
-            </View>
-            <View style={styles.content}>
-                <Text style={{textAlign:'center'}}>Sorry No Schedule for the day</Text>
-            </View>
+              <Text>Loading</Text>
           </View>
         );
     }else{
-        return(
-          <View style={styles.container}>
-            <View style={styles.navbar}>
-                <View style={styles.navbarLeft}>
+      if(day_number == 0 || day_number == 6){
+          return(
+            <View style={styles.container}>
+              <View style={styles.navbar}>
                   <Text style={styles.navTitle}>{days_of_week[day_number]}</Text>
-                </View>
-                <View style={styles.navbarRight}>
-                    <Text style={styles.date}>{REAL_DATE}</Text>
-                </View>
+              </View>
+              <View style={styles.content}>
+                  <Text style={{textAlign:'center'}}>Sorry No Schedule for the day</Text>
+              </View>
             </View>
-            <View style={styles.content}>
+          );
+      }else{
+          return(
+            <View style={styles.container}>
+              <View style={styles.navbar}>
+                  <View style={styles.navbarLeft}>
+                    <TouchableOpacity
+                    onPress={()=>this.handleRemove()}
+                    >
+                    <Text style={styles.navTitle}>{days_of_week[day_number]}</Text>
+                    </TouchableOpacity>
+                  </View>
+                  <View style={styles.navbarRight}>
+                      <Text style={styles.date}>{REAL_DATE}</Text>
+                  </View>
+              </View>
+              <View style={styles.content}>
 
-              <ScrollView>
-              {
-                // inforamtion.days.Monday.courses.map((i,v)=>this.displayCourse(i,v))
-              }
-              </ScrollView>
+                <ScrollView>
+                {
+                  JSON.parse(this.state.collectedData).days[days_of_week[day_number]].courses.map((value,index)=>this.displayCourse(value,index))
+                }
+                </ScrollView>
 
+              </View>
             </View>
-          </View>
-        );
+          );
+        }
+    }
   }
-}
 
 }
