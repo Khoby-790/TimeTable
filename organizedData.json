@@ -4,11 +4,20 @@
       "level":{
         "100":{
           "days":{
+            "Monday":{
+              "courses":[]
+            },
             "Tuesday":{
               "courses":
               [
                 {"course_id":"CSCD 103","course_title":"Introduction To Computer Science","venue":"NNB 2","time":"11:30"}
               ]
+              },
+              "Wednesday":{
+                "courses":[]
+              },
+              "Thursday":{
+                "courses":[]
               },
             "Friday":{
               "courses":
@@ -47,7 +56,10 @@
                 {"course_id":"CSCD 207","course_title":"Numerical Methods","venue":"NNB 1","time":"07:30"},
                 {"course_id":"CSCD 205","course_title":"Programming I(c++)","venue":"NNB 1","time":"08:30"}
               ]
-              }
+            },
+            "Friday":{
+              "courses":[]
+            }
           }
         },
         "300":{
@@ -57,6 +69,9 @@
               [
                 {"course_id":"CSCD 301","course_title":"Object Oriented Analysis and Design","venue":"JQB 11","time":"11:30"}
               ]
+              },
+              "Tuesday":{
+                "courses":[]
               },
             "Wednesday":{
               "courses":
@@ -125,7 +140,10 @@
                 {"course_id":"CSCD 417","course_title":"Theory and Survey of Programming Languages","venue":"JQB 14","time":"13:30"},
                 {"course_id":"CSCD 400","course_title":"Project","venue":"JQB 23","time":"16:30"}
               ]
-              }
+            },
+            "Friday":{
+              "courses":[]
+            }
             }
         }
       }
@@ -139,7 +157,19 @@
                 [
                   {"course_id":"CSIT 205","course_title":"Object Oriented Techniques for IT Problem Solving","venue":"NNB 2","time":"07:30"}
                 ]
-                }
+              },
+              "Tuesday":{
+                "courses":[]
+              },
+              "Wednesday":{
+                "courses":[]
+              },
+              "Thursday":{
+                "courses":[],
+              },
+              "Friday":{
+                "courses":[]
+              }
               }
         },
         "200":{
@@ -159,6 +189,9 @@
                 {"course_id":"CSIT  205","course_title":"Object Oriented Techniques for IT Problem Solving","venue":"JQB 14","time":"10:30"},
                 {"course_id":"CSIT 205","course_title":"Object Oriented Techniques for IT Problem Solving","venue":"KAB","time":"11:30"}
               ]
+              },
+              "Wednesday":{
+                "courses":[]
               },
             "Thursday":{
               "courses":
@@ -182,6 +215,9 @@
               [
                 {"course_id":"CSIT 303","course_title":"Human Computer Interaction","venue":"MATH 19","time":"17:30"}
               ]
+              },
+              "Tuesday":{
+                "courses":[]
               },
             "Wednesday":{
               "courses":
