@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, ScrollView, AsyncStorage,TouchableOpacity} from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import Course from './course';
 import styles from './Css/Styles';
 import SelectPage from './selectpage';
@@ -117,7 +118,12 @@ export default class TimeTable extends React.Component{
                     </TouchableOpacity>
                   </View>
                   <View style={styles.navbarRight}>
-                      <Text style={styles.date}>{REAL_DATE}</Text>
+                      <View>
+                          <Text style={styles.date}>{REAL_DATE}</Text>
+                      </View>
+                      <View>
+                          <Ionicons name="ios-log-out" size={32} color="green"/>
+                      </View>
                   </View>
               </View>
               <View style={styles.content}>
