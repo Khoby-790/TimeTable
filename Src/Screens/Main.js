@@ -7,7 +7,7 @@ const MONTHS = ['January','February','March','April','May','June','July','August
 //let data = require('../../data.json');
 let days_of_week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 let dat = new Date();
-let day_number = 1;
+let day_number = dat.getDay();
 var day = dat.getDate();
 let Actual_day;
 let inforamtion;
