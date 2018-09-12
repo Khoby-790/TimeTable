@@ -1,12 +1,12 @@
 import React from 'react';
 import {View, Text, ScrollView, AsyncStorage,TouchableOpacity} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import {createDrawerNavigator} from 'react-navigation';
 import Course from './course';
 import styles from './Css/Styles';
 import SelectPage from './selectpage';
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-//let data = require('../../data.json');
-let days_of_week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const days_of_week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 let dat = new Date();
 let day_number = dat.getDay();
 var day = dat.getDate();
