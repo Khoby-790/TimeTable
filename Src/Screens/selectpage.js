@@ -63,7 +63,7 @@ export default class SelectPage extends React.Component{
 
         return(
             <ImageBackground
-                source={require('./images/splash.png')}
+                source={require('./images/background.png')}
                 style={styles.background}
             >
             <View style={styles.container}>

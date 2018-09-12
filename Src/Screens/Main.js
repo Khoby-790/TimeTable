@@ -38,7 +38,7 @@ export default class TimeTable extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      collectedData:'hello',
+      collectedData:null,
       loader:true,
     }
   }
@@ -72,7 +72,9 @@ export default class TimeTable extends React.Component{
 
     displayCourse(data,v){
       if(data == null){
-        // return();
+        <Course
+        course_title="NO SCHEDULE"
+        />
       }else{
         return(
           <Course
@@ -111,18 +113,18 @@ export default class TimeTable extends React.Component{
             <View style={styles.container}>
               <View style={styles.navbar}>
                   <View style={styles.navbarLeft}>
-                    <TouchableOpacity
-                    onPress={()=>this.handleRemove()}
-                    >
                     <Text style={styles.navTitle}>{days_of_week[day_number]}</Text>
-                    </TouchableOpacity>
                   </View>
                   <View style={styles.navbarRight}>
-                      <View>
+                      <View style={styles.navbarCol}>
                           <Text style={styles.date}>{REAL_DATE}</Text>
                       </View>
-                      <View>
-                          <Ionicons name="ios-log-out" size={32} color="green"/>
+                      <View style={styles.navbarCol_1}>
+                          <TouchableOpacity
+                          onPress={()=>this.handleRemove()}
+                          >
+                          <Ionicons name="ios-log-out" size={30} color="#ffff"/>
+                          </TouchableOpacity>
                       </View>
                   </View>
               </View>
