@@ -106,7 +106,7 @@
                 ]
                 },
               "Thursday":{
-                "courses":  
+                "courses":
                 [
                   {"course_id":"MATH 223","course_title":"Calculus II (G1)","course_venue":"MATH 05","course_time":"07:30"},
                   {"course_id":"CSCD 207","course_title":"Numerical Methods","course_venue":"NNB 1","course_time":"07:30"},
@@ -121,8 +121,7 @@
                 ]
                 }
               }
-            }
-          },
+            },
           "300":{
             "days":{
               "Monday":{
@@ -134,7 +133,7 @@
               "Tuesday":{
                 "courses":
                 [
-                  
+
                 ]
                 },
               "Wednesday":{
@@ -161,7 +160,7 @@
                   {"course_id":"MATH 355","course_title":"Discrete Mathematics","course_venue":"JQB 11","course_time":"17:30"},
                   {"course_id":"CSCD 315","course_title":"Operating Systems","course_venue":"NNB 3","course_time":"18:30"}
                 ]
-                } 
+                }
               }
           },
           "400":{
@@ -200,7 +199,7 @@
               "Thursday":{
                 "courses":
                 [
-                  {"course_id":"CSCD 423","course_title":"Software Modelling and Simulation","course_venue":"JQB 19","course_time":"11:30"},          
+                  {"course_id":"CSCD 423","course_title":"Software Modelling and Simulation","course_venue":"JQB 19","course_time":"11:30"},
                   {"course_id":"CSCD 417","course_title":"Theory and Survey of Programming Languages","course_venue":"JQB 14","course_time":"13:30"},
                   {"course_id":"CSCD 400","course_title":"Project","course_venue":"JQB 23","course_time":"16:30"}
                 ]
@@ -208,10 +207,10 @@
                 "Friday":{
                   "courses":
                   [
-                    
+
                   ]
                 }
-            }
+              }
           }
         }
       },
@@ -274,7 +273,7 @@
               "Wednesday":{
                 "courses":
                 [
-                  
+
                 ]
                 },
               "Thursday":{
@@ -303,7 +302,7 @@
               "Tuesday":{
                 "courses":
                 [
-                  
+
                 ]
                 },
               "Wednesday":{
@@ -381,4 +380,4 @@
         }
       }
     }
-  
+  }

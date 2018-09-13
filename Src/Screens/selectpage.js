@@ -38,9 +38,11 @@ export default class SelectPage extends React.Component{
        let prog = this.state.program;
        let level = this.state.level;
 
-
+       // console.log(prog);
+       // console.log(level);
         //query timetable data and stringfy it before passing to the next page.
          let userRealTimeTableData = data[prog].level[level];
+         // console.log(userRealTimeTableData);
          let jsondata = JSON.stringify(userRealTimeTableData);
          AsyncStorage.setItem('userDetails', jsondata);
          this.props.navigation.navigate('pagecheck'); // navigate to the nexrt page from navigator

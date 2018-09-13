@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, ScrollView, AsyncStorage,TouchableOpacity} from 'react-native';
+import {View, Text, ScrollView, AsyncStorage,TouchableOpacity,ActivityIndicator,StatusBar} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import {createDrawerNavigator} from 'react-navigation';
 import Course from './course';
@@ -109,6 +109,7 @@ export default class TimeTable extends React.Component{
             </View>
           );
       }else{
+        if(this.state.collectedData != null){
           return(
             <View style={styles.container}>
               <View style={styles.navbar}>
@@ -139,6 +140,32 @@ export default class TimeTable extends React.Component{
               </View>
             </View>
           );
+        }else{
+          return (
+            <View style={styles.container}>
+              <View style={styles.navbar}>
+                  <View style={styles.navbarLeft}>
+                    <Text style={styles.navTitle}>{days_of_week[day_number]}</Text>
+                  </View>
+                  <View style={styles.navbarRight}>
+                      <View style={styles.navbarCol}>
+                          <Text style={styles.date}>{REAL_DATE}</Text>
+                      </View>
+                      <View style={styles.navbarCol_1}>
+                          <TouchableOpacity
+                          onPress={()=>this.handleRemove()}
+                          >
+                          <Ionicons name="ios-log-out" size={30} color="#ffff"/>
+                          </TouchableOpacity>
+                      </View>
+                  </View>
+              </View>
+              <View style={styles.content}>
+
+              </View>
+            </View>
+          );
+        }
         }
     }
   }
