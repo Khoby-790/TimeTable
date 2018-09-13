@@ -31,7 +31,7 @@
             }
         },
         "Information Technology":{
-            "Level":{
+            "level":{
                 "100":{
                     "days":{
                         "Monday":{
@@ -55,7 +55,7 @@
                                     "course_venue":"NNB 3"
                                 }
                             ]
-                        } 
+                        }
                     }
                 }
             }

@@ -61,9 +61,7 @@ export default class TimeTable extends React.Component{
 
   handleRemove(){
     AsyncStorage.clear();
-    return(
-      <SelectPage/>
-    );
+    this.props.navigation.navigate('Select');
   }
 
 
