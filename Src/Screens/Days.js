@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Text, TouchableOpacity, ScrollView} from "react-native";
 import styles from './Css/Styles';
+import { Ionicons } from '@expo/vector-icons';
 import {FontAwesome} from 'react-native-vector-icons';
 let day = new Date().getDay();
-
 
 
 
@@ -49,6 +49,7 @@ export default class Days extends React.Component{
                    >
                        <View style={styles.cardInner}>
                            <View style={styles.dayColLeft}>
+                            <Ionicons name="md-time" size={32} color="#003366"/>
                            </View>
                            <View style={styles.dayColRight}>
                                <Text style={styles.dayText}>Monday</Text>
@@ -63,6 +64,7 @@ export default class Days extends React.Component{
                    >
                        <View style={styles.cardInner}>
                            <View style={styles.dayColLeft}>
+                            <Ionicons name="md-time" size={32} color="#003366"/>
                            </View>
                            <View style={styles.dayColRight}>
                                <Text style={styles.dayText}>Tuesday</Text>
@@ -77,6 +79,7 @@ export default class Days extends React.Component{
                    >
                        <View style={styles.cardInner}>
                            <View style={styles.dayColLeft}>
+                            <Ionicons name="md-time" size={32} color="#003366"/>
                            </View>
                            <View style={styles.dayColRight}>
                                <Text style={styles.dayText}>Wednessday</Text>
@@ -91,6 +94,7 @@ export default class Days extends React.Component{
                    >
                        <View style={styles.cardInner}>
                            <View style={styles.dayColLeft}>
+                            <Ionicons name="md-time" size={32} color="#003366"/>
                            </View>
                            <View style={styles.dayColRight}>
                                <Text style={styles.dayText}>Thursday</Text>
@@ -105,6 +109,7 @@ export default class Days extends React.Component{
                    >
                        <View style={styles.cardInner}>
                            <View style={styles.dayColLeft}>
+                            <Ionicons name="md-time" size={32} color="#003366"/>
                            </View>
                            <View style={styles.dayColRight}>
                                <Text style={styles.dayText}>Friday</Text>

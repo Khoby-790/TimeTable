@@ -1,13 +1,14 @@
 import React from 'react';
-import {View, Text, ScrollView, AsyncStorage,TouchableOpacity} from 'react-native';
+import {View, Text, ScrollView, AsyncStorage,TouchableOpacity,ActivityIndicator,StatusBar} from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import {createDrawerNavigator} from 'react-navigation';
 import Course from './course';
 import styles from './Css/Styles';
 import SelectPage from './selectpage';
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-//let data = require('../../data.json');
-let days_of_week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const days_of_week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 let dat = new Date();
-let day_number = 1;
+let day_number = dat.getDay();
 var day = dat.getDate();
 let Actual_day;
 let inforamtion;
@@ -37,7 +38,7 @@ export default class TimeTable extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      collectedData:'hello',
+      collectedData:null,
       loader:true,
     }
   }
@@ -71,7 +72,9 @@ export default class TimeTable extends React.Component{
 
     displayCourse(data,v){
       if(data == null){
-        // return();
+        <Course
+        course_title="NO SCHEDULE"
+        />
       }else{
         return(
           <Course
@@ -106,18 +109,24 @@ export default class TimeTable extends React.Component{
             </View>
           );
       }else{
+        if(this.state.collectedData != null){
           return(
             <View style={styles.container}>
               <View style={styles.navbar}>
                   <View style={styles.navbarLeft}>
-                    <TouchableOpacity
-                    onPress={()=>this.handleRemove()}
-                    >
                     <Text style={styles.navTitle}>{days_of_week[day_number]}</Text>
-                    </TouchableOpacity>
                   </View>
                   <View style={styles.navbarRight}>
-                      <Text style={styles.date}>{REAL_DATE}</Text>
+                      <View style={styles.navbarCol}>
+                          <Text style={styles.date}>{REAL_DATE}</Text>
+                      </View>
+                      <View style={styles.navbarCol_1}>
+                          <TouchableOpacity
+                          onPress={()=>this.handleRemove()}
+                          >
+                          <Ionicons name="ios-log-out" size={30} color="#ffff"/>
+                          </TouchableOpacity>
+                      </View>
                   </View>
               </View>
               <View style={styles.content}>
@@ -131,6 +140,32 @@ export default class TimeTable extends React.Component{
               </View>
             </View>
           );
+        }else{
+          return (
+            <View style={styles.container}>
+              <View style={styles.navbar}>
+                  <View style={styles.navbarLeft}>
+                    <Text style={styles.navTitle}>{days_of_week[day_number]}</Text>
+                  </View>
+                  <View style={styles.navbarRight}>
+                      <View style={styles.navbarCol}>
+                          <Text style={styles.date}>{REAL_DATE}</Text>
+                      </View>
+                      <View style={styles.navbarCol_1}>
+                          <TouchableOpacity
+                          onPress={()=>this.handleRemove()}
+                          >
+                          <Ionicons name="ios-log-out" size={30} color="#ffff"/>
+                          </TouchableOpacity>
+                      </View>
+                  </View>
+              </View>
+              <View style={styles.content}>
+
+              </View>
+            </View>
+          );
+        }
         }
     }
   }

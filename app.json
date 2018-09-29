@@ -1,17 +1,17 @@
 
-{ 	
+{
   "expo": {
   	"name": "Timetable",
     "sdkVersion": "27.0.0",
     "icon": "./Src/Screens/images/logo1.png",
 	"description": "Basic app",
-	"version": "1.0.1",
+	"version": "2.0.0",
 	"orientation": "portrait",
 	"ios": {
-	"bundleIdentifier": "com.emmanuelbaidoo.timetable" 
+	"bundleIdentifier": "com.backslashgh.timetable"
 	},
 	"android": {
-	"package": "com.emmanuelbaidoo.timetable"
+	"package": "com.backslashgh.timetable"
 	},
 	"splash": {
   	"image": "./Src/Screens/images/splashface3.png",
@@ -20,5 +20,5 @@
 		"resizeMode":"cover"
   }
   }
-  
+
 }

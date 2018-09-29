@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator} from 'react-navigation';
-import {FontAwesome} from 'react-native-vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 import TimeTable from './Main';
 import MoreOnDays from './index';
 
@@ -11,16 +11,16 @@ let Views = createBottomTabNavigator({
   },
   {
     navigationOptions:({ navigation }) => ({
-      TabBarIcon:({focused, tintColor}) =>{
+      tabBarIcon:({focused, tintColor}) =>{
         const {routeName} = navigation.state;
         let name;
         if(routeName == "Today"){
-          name = "clock-o";
+          name = "md-notifications";
         }else if(routeName == "Days"){
-          name = "calendar";
+          name = "md-podium";
         }
 
-        return <FontAwesome name={name} color="#003366" size={30}/>
+        return <Ionicons name={name} size={32} color="#003366"/>;
       }
     }),
     tabBarOptions: {

@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, Text, ScrollView,} from 'react-native';
+import {View, Text, ScrollView,ActivityIndicator,StatusBar,AsyncStorage} from 'react-native';
+
 import Course from './course';
 import styles from './Css/Styles';
 
@@ -10,20 +11,36 @@ let dat = new Date();
 
 
 
-let course = data.days;
 
 
- 
+
+
 
 
  export default class DayCourse extends React.Component{
-  constructor(props){
-    super(props);
-    
-  }
+   constructor(props){
+     super(props);
+     this.state = {
+       collectedData:null,
+       loader:true,
+     }
+   }
 
+   componentDidMount(){
+     inforamtion = this.collectUsertimeTable();
+     inforamtion.then((value)=>{
+       this.setState({
+         collectedData:value,
+         loader:false
+       })
+     })
+   }
 
-  
+   collectUsertimeTable = async () =>{
+     let userDetails = await AsyncStorage.getItem('userDetails');
+
+     return userDetails;
+   }
 
 
 displayCourse(data,v){
@@ -57,23 +74,30 @@ static navigationOptions =({navigation})=> {
 
 
   render(){
-  
+
     let day_number = this.props.navigation.getParam('course_num');
+    if(this.state.loader){
+      return (
+        <View style={styles.container}>
+          <ActivityIndicator />
+          <StatusBar barStyle="default" />
+        </View>
+      );
+    }else{
         return(
           <View style={styles.container}>
             <View style={styles.content}>
 
               <ScrollView>
               {
-                course[days_of_week[day_number]].courses.map((i,v)=>this.displayCourse(i,v))
+                JSON.parse(this.state.collectedData).days[days_of_week[day_number]].courses.map((value,index)=>this.displayCourse(value,index))
               }
               </ScrollView>
 
             </View>
           </View>
         );
+      }
 }
 
 }
-
-

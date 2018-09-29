@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/block/Desktop/timetable/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldrtl-v23/values-ldrtl-v23.xml",
+            "map": [
+                {
+                    "source": "/Users/block/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.1.1.aar/d4360b1ddff1febea4f25416efb7c496/res/values-ldrtl-v23/values-ldrtl-v23.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "240",
+                        "endColumns": "112",
+                        "endOffsets": "348"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}

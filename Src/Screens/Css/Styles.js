@@ -28,9 +28,20 @@ let styles = StyleSheet.create({
     flex:1,
   },
   navbarRight:{
-    paddingRight:20,
+    paddingRight:0,
     justifyContent:'center',
     flex:1,
+    display:'flex',
+    flexDirection:'row',
+  },
+  navbarCol:{
+    flex:2,
+    justifyContent:'center',
+  },
+  navbarCol_1:{
+    position:'relative',
+    left:0,
+    top:23,
   },
   timeHeader:{
     fontSize:10,
@@ -48,9 +59,9 @@ let styles = StyleSheet.create({
   },
   date:{
     color:'white',
-    position:'relative',
-    left:10,
-    top:5,
+    // position:'relative',
+    // left:10,
+    // top:5,
   },
   content:{
     flex:1,

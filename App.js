@@ -1,3 +1,11 @@
+/*
+*@description :: this is the where the app begins to run
+*@author: Backslash
+*@
+*
+*/
+
+
 import React from 'react';
 import { StyleSheet,AsyncStorage, ActivityIndicator, View, StatusBar ,Text} from 'react-native';
 import Store from './Src/library/Store';
